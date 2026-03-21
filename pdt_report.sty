@@ -44,6 +44,25 @@
     {}
 }
 
+% header with logo on every page
+\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyhead[L]{\includegraphics[height=12pt]{assets/logo.png}}
+  \fancyfoot[R]{\small\thepage}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+\fancypagestyle{fancy}{%
+  \fancyhf{}
+  \fancyhead[L]{\includegraphics[height=12pt]{assets/logo.png}}
+  \fancyfoot[R]{\small\thepage}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+\AtBeginDocument{\pagestyle{fancy}}
+
 \widowpenalty=10000
 \clubpenalty=10000
 \flushbottom
@@ -194,25 +213,12 @@
       \parindent 1em\noindent
       \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
     }
-    \thispagestyle{empty}
+    \thispagestyle{plain}
     \@maketitle
     \@thanks
   \endgroup
   \let\maketitle\relax
   \let\thanks\relax
-}
-
-% rules for title box at top of first page
-\newcommand{\@toptitlebar}{
-  \hrule height 4\p@
-  \vskip 0.25in
-  \vskip -\parskip%
-}
-\newcommand{\@bottomtitlebar}{
-  \vskip 0.29in
-  \vskip -\parskip
-  \hrule height 1\p@
-  \vskip 0.09in%
 }
 
 % create title
@@ -222,10 +228,8 @@
     \hsize\textwidth
     \linewidth\hsize
     \vskip 0.1in
-    \@toptitlebar
     \centering
     {\LARGE\bf \@title\par}
-    \@bottomtitlebar
     \def\And{%
       \end{tabular}\hfil\linebreak[0]\hfil%
       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
