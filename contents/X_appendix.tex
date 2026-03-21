@@ -1,0 +1,21 @@
+\newpage
+\appendix
+\begin{appendices}
+    % 1. Start a new local contents list
+    \startcontents[appendices]
+
+    % 2. Print the local table of contents (only for what follows)
+    \printcontents[appendices]{l}{1}{\setcounter{tocdepth}{2}}
+    \newpage
+
+    \section{First Appendix Section}
+    \label{appx: first}
+    \lipsum[12]
+    \lipsum[13]
+
+    \section{Second Appendix Section}
+    \label{appx: second}
+    \lipsum[14]
+    \lipsum[15]
+
+\end{appendices}
