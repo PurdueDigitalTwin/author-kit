@@ -1,5 +1,9 @@
 # Official LaTeX Template for Purdue Digital Twin Lab
 
+[![Build](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/build.yaml/badge.svg)](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/build.yaml)
+[![Pre-commit](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/pre-commit.yaml)
+[![Release](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/release.yaml/badge.svg)](https://github.com/PurdueDigitalTwin/author-kit/actions/workflows/release.yaml)
+
 This is the official LaTeX template for reports and publications from the [Purdue Digital Twin Lab](https://engineering.purdue.edu/digitaltwin). It provides consistent formatting, a branded header with the lab logo, and a structured multi-file layout.
 
 ## Using This Template
