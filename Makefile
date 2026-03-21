@@ -22,5 +22,5 @@ clean:
 cleanall: clean
 	latexmk -C
 	rm -rf release
-	rm -f ${wildcard *.aux *.bbl *fdb_latexmk *.fls *.log *.ptc *.synctex.gz}
-	rm -f ${wildcard contents/*.aux}
+	rm -f $(wildcard *.aux *.bbl *fdb_latexmk *.fls *.log *.ptc *.synctex.gz)
+	rm -f $(wildcard contents/*.aux)
