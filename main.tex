@@ -1,11 +1,16 @@
 \documentclass[11pt]{article} % For LaTeX2e
 \usepackage{pdt_report}
+\input{commands}
 
-\usepackage{lipsum}
+% It is strongly recommended to use hyperref, especially for readibility.
+\definecolor{boilermakergold}{HTML}{cfb991}
+\definecolor{steel}{HTML}{555960}
+\definecolor{coolgray}{HTML}{6f727b}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=coolgray]{hyperref}
 
-% Add your title here
+% Add your title here.
 \title{%
-  A Template for \LaTeX
+  A \LaTeX{} Template for Report and Publications
 }
 
 % The \author macro works with any number of authors. There are two commands
@@ -15,7 +20,6 @@
 % lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
 % authors names on the first line, and the last on the second line, try using
 % \AND instead of \And before the third author name.
-
 \author{%
   Juanwu~Lu~$^{1}$\thanks{Use footnote for providing further information
     about author (webpage, alternative address)---but \emph{not} for acknowledging funding agencies.}\\
@@ -45,10 +49,26 @@
   % \texttt{email} \\
 }
 
+% Change the title of your supplementary material here.
+\renewcommand{\appendixtocname}{Supplementary Material}
+\renewcommand{\appendixpagename}{Supplementary Material}
+
 \begin{document}
 
 \maketitle
 
+% -----------------------------------------
+% Main contents
 \input{contents/0_abstract}
+\input{contents/1_introduction}
+\input{contents/2_related}
+\input{contents/3_method}
+\input{contents/4_experiment}
+\input{contents/5_conclusion}
+\input{contents/6_postscripts}
+
+% -----------------------------------------
+% Appendix
+\input{contents/X_appendix}
 
 \end{document}
