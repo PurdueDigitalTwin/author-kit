@@ -1,0 +1,45 @@
+\section{Method}
+\label{sec: method}
+
+\subsection{Level-2 Heading}
+\label{subsec: heading}
+\lipsum[5]
+\lipsum[6]
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        % Nodes
+        \node[obs] (oprev) {$\vo_{t-1}$};
+        \node[obs, right=of oprev] (ocurr) {$\vo_{t}$};
+        \node[obs, right=of ocurr] (onext) {$\vo_{t+1}$};
+        \node[latent, below=of oprev] (sprev) {$\vs_{t-1}$};
+        \node[latent, right=of sprev] (scurr) {$\vs_{t}$};
+        \node[const, left=of sprev] (spast) {$\ldots\quad$};
+        \node[latent, right=of scurr] (snext) {$\vs_{t+1}$};
+        \node[const, right=of snext] (sfutr) {$\quad\ldots$};
+        \node[obs, below=of sprev, xshift=0.8cm] (aprev) {$\va_{t-1}$};
+        \node[obs, below=of scurr, xshift=0.8cm] (acurr) {$\va_{t}$};
+
+        % Edges
+        \edge {spast} {sprev};
+        \edge {sprev} {oprev, scurr, aprev};
+        \edge {scurr} {ocurr, snext, acurr};
+        \edge {snext} {onext, sfutr};
+        \edge {aprev} {scurr};
+        \edge {acurr} {snext};
+    \end{tikzpicture}
+    \caption{Example figure caption.}
+    \label{fig: bayesnet}
+\end{figure}
+
+
+\subsubsection{Level-3 Heading}
+\label{subsubsec: heading}
+\lipsum[7]
+\lipsum[8]
+\begin{equation}
+    \gJ(\vtheta)\triangleq{
+        \mathbb{E}_{\tau\sim{p^{\pi}_{\vtheta}(\tau)}}
+        \left[\sum\limits_{t=1}^{\left|\tau\right|}r(s_{t},a_{t})\right]
+    }
+\end{equation}
