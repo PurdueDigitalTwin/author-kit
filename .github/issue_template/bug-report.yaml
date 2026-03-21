@@ -20,9 +20,9 @@ body:
         * If you prefer a non-templated issue report, click [here][Raw report].
 
 
-        [Discussions]: https://github.com/PurdueDigitalTwin/research/discussions
+        [Discussions]: https://github.com/PurdueDigitalTwin/author-kit/discussions
 
-        [issue search]: https://github.com/PurdueDigitalTwin/research/search?q=is%3Aissue&type=issues
+        [issue search]: https://github.com/PurdueDigitalTwin/author-kit/search?q=is%3Aissue&type=issues
 
         [Raw report]: https://github.com/PurdueDigitalTwin/research/issues/new?template=none
   - type: textarea
@@ -40,9 +40,9 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: System info (python version, jaxlib version, accelerator, etc.)
+      label: System info
       description: >-
-        Include the output of `import jax; jax.print_environment_info()`
+        Include a list of your system specifications.
       placeholder: |
         ```
         ...
